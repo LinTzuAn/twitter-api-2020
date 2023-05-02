@@ -57,6 +57,6 @@ router.post('/api/followships', auth, isUser, userController.addFollowing)
 router.delete('/api/followships/:followingId', auth, isUser, userController.removeFollowing)
 
 // 有錯就到這
-router.use('/', apiErrorHandler)
+router.use(apiErrorHandler)
 
 module.exports = router
